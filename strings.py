@@ -15,8 +15,15 @@ def main():
     #    least 3 words in it
     # your code below here
 
+    s1 = "Alpha Beta Gamma Delta"
+    s2 = input("Enter three or more words: ")
+
     # print both strings
 
+    print (s1)
+    print ()
+    print (s2)
+    print ()
 
     '''
     - element access
@@ -32,6 +39,15 @@ def main():
     # the character
     # your code below here
 
+    for i in range(len(s1)):
+        print (s1[i])
+
+    print ()
+
+    for i in range (1, len(s1), 3):
+        print (s1[i])
+
+    print ()
 
     '''
     - element insertion
@@ -48,6 +64,13 @@ def main():
 
     # form a new string named "snew" using concatenation and print snew.
 
+    s3 = "Ro "
+    s4 = s1[0:6]
+    s5 = s1[6:10]
+    snew = s4 + s3 + s5
+
+    print (snew)
+    print ()
 
     '''
     - element deletion
@@ -65,6 +88,13 @@ def main():
 
     # use concatenation to form snew and print it
 
+    snewindex = snew.find('Ro ')
+    s6 = snew[0:snewindex]
+    s7 = snew[snewindex+3:]
+    snew = s6 + s7
+    print (snew)
+    print ()
+    
 
     '''
     - element updates
@@ -73,6 +103,9 @@ def main():
     # so common Python has a method for it. Use the replace() method to 
     # replace a word in s1. Assign the new string to snew and print it.
 
+    snew = s1.replace('Alpha', 'Epsilon')
+    print (snew)
+    print ()
 
     '''
     Last item
@@ -81,7 +114,12 @@ def main():
     # to the next program file "lists.py"
     # Set variable named "l" to s1.split()
 
+    l = s1.split()
+
     # print l
 
+    print (l)
+    print ()
 
-    main()
+
+main()
